@@ -14,7 +14,19 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  const { name, email, purpose, message } = req.body;
+  try {
+    const { name, email, purpose, message } = req.body;
+    
+    // Validate required fields
+    if (!name || !email || !purpose || !message) {
+      return res.status(400).json({ message: 'All fields are required' });
+    }
+    
+    // Validate environment variables
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS || !process.env.OWNER_EMAIL) {
+      console.error('Missing environment variables');
+      return res.status(500).json({ message: 'Server configuration error' });
+    }
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -44,11 +56,10 @@ export default async function handler(req, res) {
     `
   };
 
-  try {
     await transporter.sendMail(mailOptions);
     res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ message: 'Failed to send email' });
+    res.status(500).json({ message: 'Failed to send email', error: error.message });
   }
 }
