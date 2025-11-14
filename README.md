@@ -1,4 +1,4 @@
-Project Overview
+📌Project Overview
 
 This project is a personal portfolio website showcasing my work, skills, projects and achievements. The goal:
 
@@ -8,7 +8,7 @@ To highlight my tech stack, past work/­projects, and contact information in one
 
 To serve as a hub for my online presence: blog links, GitHub, LinkedIn, and downloadable CV.
 
-Key Features
+📌Key Features
 
 Responsive layout that works on mobile, tablet and desktop.
 
@@ -26,7 +26,7 @@ Downloadable resume/CV button.
 
 Clean, minimal design that emphasises readability and aesthetics.
 
-Tech Stack
+📌Tech Stack
 
 Frontend: HTML5, CSS3 (possibly SASS/SCSS), JavaScript (or a framework if used).
 
@@ -84,23 +84,7 @@ Netlify / Vercel: connect repo → build & deploy.
 
 Custom domain (if you have one) pointing to host.
 
-📌 How to Contribute (for future enhancements)
-
-While this is your personal portfolio, if you ever open up for collaboration:
-
-Fork the repository.
-
-Create a feature branch: git checkout -b feature/<name>.
-
-Commit changes: git commit -m "feat: <description>".
-
-Push to your fork and open a Pull Request.
-
-Ensure code style consistency (indentation, naming, responsiveness).
-
-Include screenshots or gif of changes if applicable.
-
- To-Do / Roadmap
+📌 To-Do / Roadmap
 
  Add dark mode / toggle theme.
 
@@ -112,14 +96,7 @@ Include screenshots or gif of changes if applicable.
 
  Optimize images for performance (lazy loading, webp).
 
- License
-
-Specify your license here (e.g., MIT).
-
-MIT License
-© 2025 R.A. Shankari
-
- Acknowledgements
+ 📌Acknowledgements
 
 Thanks to any tutorials, libraries, icons, fonts you used. For example:
 
