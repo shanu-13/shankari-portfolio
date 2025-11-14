@@ -1,0 +1,64 @@
+/* SpaceBackground.css */
+.space-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+  z-index: -10;
+  pointer-events: none;
+}
+
+/* Stars */
+.stars {
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat top center;
+  animation: moveStars 200s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveStars {
+  0% { background-position: 0 0; }
+  100% { background-position: -10000px 5000px; }
+}
+
+/* Twinkling */
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: transparent url('../public/stardust.png') repeat top center;
+  animation: moveTwinkling 400s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveTwinkling {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 5000px; }
+}
+
+
+
+/* Planet */
+.planet {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 30% 30%, #ff5f5f, #900c3f);
+  border-radius: 50%;
+  box-shadow: 0 0 30px #ff5f5f;
+  animation: rotatePlanet 60s linear infinite;
+}
+
+@keyframes rotatePlanet {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1.05); }
+}
+

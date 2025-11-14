@@ -1,0 +1,113 @@
+/* src/components/AboutSection.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+.about-section {
+  position: relative;
+  height: 100vh;
+  padding: 100px 20px;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.about-content {
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+}
+
+.about-content h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(90deg, #ff0080, #7928ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  color: #dcdcdc;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://raw.githubusercontent.com/kognise/water.css/master/static/starfield.png') repeat top center;
+  animation: moveStars 60s linear infinite;
+  z-index: 1;
+}
+
+.comet {
+  position: absolute;
+  top: 20%;
+  left: -200px;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, #fff, transparent);
+  opacity: 0.8;
+  transform: rotate(45deg);
+  animation: cometFly 5s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes moveStars {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -1000px;
+  }
+}
+
+@keyframes cometFly {
+  0% {
+    left: -200px;
+    top: 20%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    left: 120%;
+    top: 80%;
+    opacity: 0;
+  }
+  100% {
+    left: -200px;
+    top: 20%;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content h2 {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,169 @@
+/* Fullscreen section split in 2 */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+.skill-text {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: white;
+  gap: 0.8rem;
+  transition: transform 0.4s ease;
+}
+
+.skill-icon {
+  font-size: 5rem;
+}
+
+.in-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+h3{
+  font-size:large;
+
+ }
+
+
+.skills-section {
+  display: flex;
+  height: 100vh;
+  padding: 80px 0;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  
+}
+
+.skills-title {
+  flex: 0 0 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(90deg, #ff0080, #7928ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  font-style: italic;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+/* Scrollable skill area */
+.skills-scroll {
+  flex: 1;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each skill slide */
+.skill-slide {
+  scroll-snap-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Skill text without box */
+.skill-text {
+  font-size: 4rem;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  transition: all 0.8s ease-out;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Reveal animation */
+.skill-text.in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Smooth scrollbar */
+.skills-scroll::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 60px 0;
+    top: 10px;
+  }
+  
+  .skills-title {
+    font-size: 2.2rem;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid;
+    border-image: linear-gradient(90deg, #ff0080, #7928ca) 1;
+    border-radius: 15px;
+    padding: 4px 0;
+    margin: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    backdrop-filter: blur(10px);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, #ff0080, #7928ca);
+  }
+  
+  .skills-scroll {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .skill-slide {
+    height: 50vh;
+  }
+  
+  .skill-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 0;
+  }
+  
+  .skills-title {
+    font-size: 2rem;
+    
+    border: 2px solid;
+    
+    border-radius: 12px;
+    padding: 3px 0;
+    margin: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    backdrop-filter: blur(10px);
+    color: transparent;
+    
+  }
+  
+  .skills-scroll {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  .skill-slide {
+    height: 85vh;
+  }
+  
+  .skill-text {
+    font-size: 2rem;
+  }
+}
+
+
