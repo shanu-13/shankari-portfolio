@@ -247,22 +247,32 @@
   margin-top: 20px;
   padding: 15px;
   border-radius: 10px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 0.3px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .status-message.success {
   background: rgba(34, 197, 94, 0.2);
   border: 1px solid rgba(34, 197, 94, 0.3);
   color: #22c55e;
+  font-style: italic;
 }
 
 .status-message.error {
   background: rgba(239, 68, 68, 0.2);
   border: 1px solid rgba(239, 68, 68, 0.3);
   color: #ef4444;
+  font-style: italic;
 }
 
 .contact-footer {

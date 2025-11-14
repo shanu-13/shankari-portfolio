@@ -101,12 +101,7 @@ section {
 }
 
 .title span {
-  background: linear-gradient(90deg, #ff0080, #7928ca);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 10px rgba(255, 0, 128, 0.5));
-  text-shadow: 0 0 20px rgba(255, 0, 128, 0.3);
+  color: #ffffff;
 }
 
 .subtext {
@@ -134,6 +129,10 @@ section {
 
 /* Tablet */
 @media (max-width: 768px) {
+  .cursor-color {
+    display: none;
+  }
+
   section {
     padding: 40px 15px;
     height: 100vh;

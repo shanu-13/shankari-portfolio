@@ -16,12 +16,16 @@ export default function HeroSection() {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      document.documentElement.style.setProperty("--x", `${e.clientX}px`);
-      document.documentElement.style.setProperty("--y", `${e.clientY}px`);
+      if (window.innerWidth > 768) {
+        document.documentElement.style.setProperty("--x", `${e.clientX}px`);
+        document.documentElement.style.setProperty("--y", `${e.clientY}px`);
+      }
     };
-    window.addEventListener("mousemove", handleMouseMove);
+    if (window.innerWidth > 768) {
+      window.addEventListener("mousemove", handleMouseMove);
+    }
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  }, [windowWidth]);
 
   useEffect(() => {
     const timer = setTimeout(() => setStartSplit(true), 1000);
